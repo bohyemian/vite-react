@@ -8,9 +8,7 @@ type FormInputProps = ComponentProps<'input'> & {
 function FormInput({ label, type, ...restProps }: FormInputProps) {
   const inputId = useId();
 
-  
   if (type === 'radio' || type === 'checkbox') {
-    
     return <FormRadioOrCheckbox label={label} type={type} {...restProps} />;
   }
 
