@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FormInput from '@/components/form-input';
-import FormRadio from '@/components/form-radio';
+import FormRadioOrCheckbox from '@/components/form-radio-or-checkbox';
 
 const formStyles = {
   display: 'flex',
@@ -69,7 +69,7 @@ function ReactForm() {
             max={90}
             step={10}
             value={limitAge}
-            onChange={e => {
+            onChange={(e) => {
               const { value } = e.target;
               setLimitAge(parseInt(value, 10));
             }}
@@ -78,31 +78,50 @@ function ReactForm() {
         </div>
 
         {/* type=file */}
-        <FormInput
-          label='프로필'
-          type='file'
-          accept='image/*'
-          multiple
-        />
+        <FormInput label="프로필" type="file" accept="image/*" multiple />
 
         {/* type=radio */}
         <fieldset>
           <legend>성별</legend>
-          <FormRadio
+          <FormRadioOrCheckbox
+            type="radio"
             label="남성"
-            value="남성"
             name="usergender"
+            value="male"
             defaultChecked
           />
-          <FormRadio
+          <FormRadioOrCheckbox
+            type="radio"
             label="여성"
-            value="여성"
             name="usergender"
+            value="female"
           />
         </fieldset>
 
         {/* type=checkbox */}
-        
+        <fieldset>
+          <legend>취미</legend>
+          <FormRadioOrCheckbox
+            type="checkbox"
+            label="공부"
+            name="userhobby"
+            value="study"
+            defaultChecked
+          />
+          <FormRadioOrCheckbox
+            type="checkbox"
+            label="운동"
+            name="userhobby"
+            value="helth"
+          />
+          <FormRadioOrCheckbox
+            type="checkbox"
+            label="영화 감상"
+            name="userhobby"
+            value="watch-a-movie"
+          />
+        </fieldset>
+
         {/* type=date */}
 
         {/* type=datetime-local */}
