@@ -7,10 +7,24 @@
     "password": "$2b$09$cQduZLwNSu/OIkYWB2ZTheTtpvlTV9qmKeBCbz2fP6BjsyZqlu4se"
   },
   {
-    "id": "a78e673f-09e8-48d1-9415-dc214fe05cdc",
+    "id": "8f545897-0a3d-4e53-8b98-8679e7218434",
     "name": "지훈",
     "email": "yamoo9@naver.com",
-    "profileImage": "/files/profile-03.jpg",
-    "password": "$2b$09$RajfNUUenRVJ9V86NpAhVeFxHh/qK011Bs3f/VrAh4HL3aJ4YTeQS"
+    "profileImage": "/files/proflie-05.jpg",
+    "password": "$2b$09$oCofMA/4q1LrJeQZ8tjD.eAyazK0PYm/f0R8d38pWIRxxsjruWMOe"
+  },
+  {
+    "id": "538d8cc4-b774-4521-a35f-895a046adfab",
+    "name": "정수진",
+    "email": "be82@naver.com",
+    "profileImage": "/files/proflie-03.jpg",
+    "password": "$2b$09$du4nk5jfDaUqILFCql9hyuI63RMIm5Wk2746Imlzo4ycjhMwl.akq"
+  },
+  {
+    "id": "f52863f2-9b7e-4504-ad75-3efc4a3dd306",
+    "name": "임시완",
+    "email": "lim@kakao.io",
+    "profileImage": "/files/proflie-01.jpg",
+    "password": "$2b$09$HjU4FRaBIpkkOSmFe2fPYuuSh7w.QtuxAUpamakApDSjXk.x.6oWu"
   }
 ]
