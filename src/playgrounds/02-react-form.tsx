@@ -134,6 +134,11 @@ function ReactForm() {
     setPickSpiceMultiple(selectedOptionValues);
   };
 
+  // [진행률 데모]
+  // 진행률 상태 정의
+  // 진행률 상태 업데이트 로직 핸들러 함수 정의 (화면 업데이트)
+  // - 상태 값 변경 시, 진행률이 변경
+
   return (
     <div className="ReactForm">
       <h2>React 폼(form)</h2>
@@ -172,6 +177,42 @@ function ReactForm() {
       </div>
 
       <form id="ReactForm" style={formStyles}>
+        <div
+          style={{
+            display: 'flex',
+            gap: 8,
+            alignItems: 'center',
+            marginBlockStart: 20,
+          }}
+        >
+          <FormInput
+            type="range"
+            label="진행률 업데이트"
+            min={0}
+            max={100}
+            step={10}
+            defaultValue={15}
+          />
+          <output style={{ translate: '0 12px' }}>15%</output>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            flexFlow: 'column',
+            gap: 8,
+            marginBlockEnd: 20,
+          }}
+        >
+          <label htmlFor="progress-bar">진행률</label>
+          <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+            <progress id="progress-bar" value="15" max="100">
+              15%
+            </progress>
+            <output>15%</output>
+          </div>
+        </div>
+
         {/* type=radio */}
         <fieldset>
           <legend>성별</legend>
