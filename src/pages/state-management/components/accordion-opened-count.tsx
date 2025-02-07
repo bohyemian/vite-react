@@ -1,12 +1,18 @@
-import { tm } from '@/utils/tw-merge';
+import { tm } from "@/utils/tw-merge";
 
-export function AccordionOpenedCount({
-  className = '',
-  children,
-}: React.ComponentProps<'output'>) {
+interface AccordionOpenedCountProps { children: React.ReactNode }
+
+function AccordionOpenedCount({ children }: AccordionOpenedCountProps) {
   return (
-    <output className={tm('text-6xl font-normal text-slate-700', className)}>
+		<output
+		  className={tm(
+		    'fixed left-1/2 -top-8 -translate-x-1/2',
+		    'text-4xl font-semibold text-black/70'
+		  )}
+		>
       {children}
     </output>
   );
 }
+
+export default AccordionOpenedCount;

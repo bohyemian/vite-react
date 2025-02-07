@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { tm } from '@/utils/tw-merge';
 import AccordionItem, { type AccordionItemType } from './accordion-item';
-import { AccordionOpenedCount } from './accordion-opened-count';
+import AccordionOpenedCount from './accordion-opened-count';
 
 interface AccordionListProps {
   title: string;

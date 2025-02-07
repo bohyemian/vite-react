@@ -1,55 +1,52 @@
-import { tm } from '@/utils/tw-merge';
+import { tm } from "@/utils/tw-merge";
+import { useState } from "react";
 
 export interface AccordionItemType {
   id: string;
   title: string;
+  open: boolean;
   children: React.ReactNode;
-  open?: boolean;
 }
 
 interface AccordionItemProps {
   title: string;
   children: React.ReactNode;
   open?: boolean;
-  onUpdate?: () => void;
+  onUpdate?: (isOpen: boolean) => void;
 }
 
 function AccordionItem({
   title,
   children,
   open = false,
-  onUpdate,
+  onUpdate, // onSubscribe
 }: AccordionItemProps) {
+
+  const [isVisible, setIsVisible] = useState(open);
+
   const handleToggle = () => {
-    onUpdate?.();
+    const nextVisible = !isVisible;
+    setIsVisible(nextVisible);
+    onUpdate?.(nextVisible);
   };
 
   return (
-    <div className={tm('flex flex-col space-y-2 w-full', 'mt-2 mb-4')}>
+    <div className="flex flex-col space-y-2 mt-4 relative">
       <button
         type="button"
-        className={tm(
-          'cursor-pointer',
-          'text-xl font-medium text-slate-800',
-          'hover:text-primary-500'
-        )}
+        className="text-lg font-semibold cursor-pointer"
         onClick={handleToggle}
       >
         {title}
       </button>
       <div
         className={tm(
-          { hidden: !open },
-          'text-sm text-slate-800 leading-[1.5]',
-          '*:mb-2',
-          // [from]
-          'opacity-0 -translate-y-2 h-0',
-          // @staring-style
-          'starting:opacity-0 starting:-translate-y-2 starting:h-0',
-          // 전환(transition)
-          'transition-all transition-discrete duration-400 ease-in-out',
-          // [to]
-          { 'opacity-100 translate-y-0 h-30': open }
+          { hidden: !isVisible },
+          '*:text-sm *:mb-2 *:transition-all',
+          'transition-all duration-300 transition-discrete delay-100',
+          'opacity-0 h-0 -translate-y-5',
+          'starting:opacity-0 starting:h-0 starting:-translate-y-5',
+          { 'opacity-100 h-30 translate-y-0': isVisible }
         )}
       >
         {children}
