@@ -31,7 +31,7 @@ function Counter({ count: initialCount = 0, step = 1, min = 0, max = 10 }: Count
   // [렌더]
   return (
     <div className={tm('flex flex-col gap-2 items-start')}>
-      <output className={tm('font-semibold text-3xl text-react')}>{count} {doubleCount}</output>
+      <output className={tm('font-semibold text-3xl text-react')}>{count} {doubleCounts}</output>
       <div className={tm('flex', '*:hover:bg-sky-800 *:cursor-pointer')}>
         <button type="button" className={tm('px-6 py-1 bg-react text-white rounded-l-full')} onClick={handleDecrease}>-{step}</button>
         <button type="button" className={tm('px-6 py-1 bg-react text-white rounded-r-full')} onClick={handleIncrease}>+{step}</button>
