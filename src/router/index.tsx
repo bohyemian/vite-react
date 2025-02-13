@@ -16,14 +16,14 @@ import NotFound from '@/pages/not-found';
 
 export const navList = [
   {
-    path: 'animation',
-    text: '애니메이션',
-    element: <AnimationWithMotionPage />,
-  },
-  {
     path: 'accessing-dom',
     text: 'DOM 접근/조작',
     element: <AccessDOMPage />,
+  },
+  {
+    path: 'animation',
+    text: '애니메이션',
+    element: <AnimationWithMotionPage />,
   },
   {
     path: 'memory-component-data',
