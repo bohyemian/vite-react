@@ -11,16 +11,16 @@ const viteConfig = defineConfig((env) => {
     plugins: [
       react({
         jsxRuntime: 'automatic',
-        babel: {
-          plugins: [
-            [
-              '@locator/babel-jsx/dist',
-              {
-                env: 'development',
-              },
-            ],
-          ],
-        },
+        // babel: {
+        //   plugins: [
+        //     [
+        //       '@locator/babel-jsx/dist',
+        //       {
+        //         env: 'development',
+        //       },
+        //     ],
+        //   ],
+        // },
       }),
       tailwindcss(),
     ],
@@ -36,9 +36,9 @@ const viteConfig = defineConfig((env) => {
       devSourcemap: true,
       modules: {
         localsConvention: 'camelCase',
-        generateScopedName: isDevMode
-          ? '_[local]_[hash:base64:3]'
-          : '_[hash:base64:6]',
+        // generateScopedName: isDevMode
+        //   ? '_[local]_[hash:base64:3]'
+        //   : '_[hash:base64:6]',
       },
     },
     resolve: {
