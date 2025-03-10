@@ -12,14 +12,14 @@ const viteConfig = defineConfig((env) => {
       react({
         jsxRuntime: 'automatic',
         babel: {
-          plugins: [
-            [
-              '@locator/babel-jsx/dist',
-              {
-                env: 'development',
-              },
-            ],
-          ],
+          // plugins: [
+          //   [
+          //     '@locator/babel-jsx/dist',
+          //     {
+          //       env: 'development',
+          //     },
+          //   ],
+          // ],
         },
       }),
       tailwindcss(),
